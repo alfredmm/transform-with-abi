@@ -306,7 +306,7 @@ nav {
 
 /* Stats Section */
 .stats {
-    background: linear-gradient(135deg, var(--baby-blue), var(--dark-pink));
+    background: linear-gradient(135deg, green, var(--black), var(--dark-pink)), green;
     color: var(--white);
     text-align: center;
 }
@@ -362,7 +362,21 @@ footer {
     margin-bottom: 20px;
     color: var(--dark-pink);
 }
-
+.footer-section p {
+    margin-bottom: 10px;
+}
+.footer-section a {
+    color: var(--baby-blue);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-section li {
+    display: block;
+    margin-bottom: 10px;
+}
+.footer-section a:hover {
+    color: var(--dark-pink);
+}
 .social-links {
     display: flex;
     gap: 15px;
