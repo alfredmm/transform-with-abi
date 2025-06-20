@@ -522,3 +522,9 @@ footer {
     100% { background-position: 0% 50%; }
 }
 /* Responsive adjustments for the animated gradient */
+.highlight{
+    font-family: 'Brush Script MT', cursive;
+    letter-spacing: 2px;
+    font-size: 32px;
+    color: var(--baby-blue);
+}
