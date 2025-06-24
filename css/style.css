@@ -110,6 +110,10 @@ nav {
     font-weight: 700;
     color: var(--black);
     text-decoration: none;
+    /* Added to help with centering and prevent overlap */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo span, .highlight {
@@ -1016,9 +1020,30 @@ footer {
 }
 
 @media (max-width: 768px) {
+    nav {
+        /* Align items to the start so logo and hamburger are on their own lines */
+        align-items: flex-start;
+        flex-direction: column; /* Stack logo and nav links vertically */
+        padding-bottom: 0; /* Adjust padding if needed */
+    }
+
+    .logo {
+        width: 100%; /* Make logo take full width */
+        text-align: center; /* Center the logo text/image */
+        margin-bottom: 15px; /* Add some space below the logo */
+    }
+
+    .logo-img {
+        margin-right: 0; /* Remove margin-right for centering */
+        margin-bottom: 10px; /* Add a bit of space below the image */
+        display: block; /* Make it a block element to center with margin auto */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .nav-links {
         position: fixed;
-        top: 80px;
+        top: 80px; /* Adjusted to be below the header, assuming header height around 80px */
         left: -100%;
         width: 100%;
         height: calc(100vh - 80px);
@@ -1027,6 +1052,7 @@ footer {
         align-items: center;
         justify-content: center;
         transition: left 0.3s;
+        z-index: 999; /* Ensure nav links are below the fixed header but above other content */
     }
 
     .nav-links.active {
@@ -1039,15 +1065,14 @@ footer {
 
     .hamburger {
         display: block;
-    }
-
-    .steps, .transformation-cards {
-        flex-direction: column;
+        position: absolute; /* Position hamburger absolutely within the header */
+        right: 20px; /* Align to the right */
+        top: 30px; /* Adjust top position as needed */
+        z-index: 1001; /* Ensure hamburger is above everything */
     }
     
-    .logo-img {
-        order: 0;
-        margin-bottom: 15px;
+    .steps, .transformation-cards {
+        flex-direction: column;
     }
     
     .packages-grid {
