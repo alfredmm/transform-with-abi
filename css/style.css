@@ -1037,13 +1037,6 @@ footer {
         padding-bottom: 0; /* Adjust padding if needed */
         height: auto;
     }
-
-    .logo {
-        width: 100%; /* Make logo take full width */
-        text-align: center; /* Center the logo text/image */
-        margin-bottom: 15px; /* Add some space below the logo */
-    }
-
     .logo-img {
         margin-right: 0; /* Remove margin-right for centering */
         margin-bottom: 10px; /* Add a bit of space below the image */
@@ -1051,12 +1044,16 @@ footer {
         margin-left: 20px;
         width: 100px;
         height: 100px;
+        position: absolute;
+        top: 20px; /* Adjust top position as needed */
+        left: 20px; /* Adjust left  position as needed */
     }
 
     .nav-links {
         position: fixed;
         top: 100px; /* Adjusted to be below the header, assuming header height around 80px */
-        left: -100%;
+        left: -100%; /* Start off-screen to the left */
+        display: flex;
         width: 100%;
         height: calc(100vh - 80px);
         background-color: var(--white);
@@ -1069,11 +1066,11 @@ footer {
 
     .nav-links.active {
                 display: block;
-                left: 0; /* Slide in from the left */
+                left: 0px; /* Slide in from the left */
          }
 
     .nav-links li {
-        margin: 15px 0;
+        margin: 15px 5px; /* Space out the links vertically */
     }
 
     .hamburger {
