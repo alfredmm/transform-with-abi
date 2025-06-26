@@ -953,7 +953,7 @@ footer {
 }
 
 .logo-img:hover {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.1) translateY(-10px) translateX(10px) translateZ(0) !important;
 }
 
 /* Animated Gradient */
@@ -1025,6 +1025,7 @@ footer {
         align-items: flex-start;
         flex-direction: column; /* Stack logo and nav links vertically */
         padding-bottom: 0; /* Adjust padding if needed */
+        height: auto;
     }
 
     .logo {
@@ -1039,6 +1040,8 @@ footer {
         display: block; /* Make it a block element to center with margin auto */
         margin-left: auto;
         margin-right: auto;
+        width: 100px;
+        height: 100px;
     }
 
     .nav-links {
@@ -1066,9 +1069,11 @@ footer {
     .hamburger {
         display: block;
         position: absolute; /* Position hamburger absolutely within the header */
-        right: 20px; /* Align to the right */
-        top: 30px; /* Adjust top position as needed */
+        right: 30px; /* Align to the right */
+        top: 70px; /* Adjust top position as needed */
         z-index: 1001; /* Ensure hamburger is above everything */
+        color: var(--baby-blue);
+        font-size: larger;
     }
     
     .steps, .transformation-cards {
