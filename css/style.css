@@ -1018,7 +1018,17 @@ footer {
         font-size: 2.5rem;
     }
 }
-
+.close-button-container {
+    display: none;
+}
+.close-button {
+    background: none;
+    border: none;
+    color: var(--dark-pink);
+    position: absolute;
+    font-size: 36px;
+    cursor: pointer;
+}
 @media (max-width: 768px) {
     nav {
         /* Align items to the start so logo and hamburger are on their own lines */
@@ -1058,8 +1068,9 @@ footer {
     }
 
     .nav-links.active {
-        left: 0;
-    }
+                display: block;
+                left: 0; /* Slide in from the left */
+         }
 
     .nav-links li {
         margin: 15px 0;
@@ -1074,7 +1085,22 @@ footer {
         color: var(--baby-blue);
         font-size: larger;
     }
+
+    .close-button{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001; /* Ensure close button is above everything */
+    }
     
+     .close-button-container{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001; /* Ensure close button is above everything */
+     }
     .steps, .transformation-cards {
         flex-direction: column;
     }

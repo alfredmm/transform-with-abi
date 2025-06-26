@@ -19,32 +19,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Transform with Abi | Personalized Transformational Wellness Coaching">
     <meta name="twitter:description" content="Transformational wellness coaching for women. Personalized coaching to help you lose weight, gain energy, and love your body.">
-    <style>
-        /* close-button-container */
-        .close-button-container {
-            display: none;
-        }
-        .close-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        @media (max-width: 768px) {
-            .close-button-container {
-                display: block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-            }
-            .nav-links.active {
-                display: block;
-            }
-        }
-        
-    </style>
-</head>
+  </head>
 <body>
     <!-- Header -->
     <header>
@@ -207,9 +182,15 @@
             // Mobile Menu Toggle
             $('.hamburger').click(function() {
                 $('.nav-links').toggleClass('active');
+                if ($('.nav-links').hasClass('active')) {
+                    $('.close-button-container').show();
+                } else {
+                    $('.close-button-container').hide();
+                }
             });
-            $('.close-button-container').click(function() {
+            $('.close-button').click(function() {
                 $('.nav-links').removeClass('active');
+                $('.close-button-container').hide();
             });
             
             // Smooth Scrolling
