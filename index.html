@@ -19,26 +19,53 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Transform with Abi | Personalized Transformational Wellness Coaching">
     <meta name="twitter:description" content="Transformational wellness coaching for women. Personalized coaching to help you lose weight, gain energy, and love your body.">
-
+    <style>
+        /* close-button-container */
+        .close-button-container {
+            display: none;
+        }
+        .close-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .close-button-container {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            .nav-links.active {
+                display: block;
+            }
+        }
+        
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <nav>
-                <a href="#home"><img src="assets/images/logo.png" alt="Transformational Wellness for Women" class="logo-img"></a>
-                <ul class="nav-links">
-                    <li><a href="about-transformation-with-abi.html">My Story</a></li>
-                    <li><a href="transformations.html">Transformations</a></li>
-                    <li><a href="wellness-packages-for-women-body-transformation.html">Wellness Packages</a></li>
-                    <li><a href="how-it-works.html">How It Works</a></li>
-                    <li><a href="contact-abi.html">Contact</a></li>
-                    <li class="animated-gradient"><a href="contact-abi.html">Start the Wellness Journey</a></li>
-                </ul>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
+    <a href="#home"><img src="assets/images/logo.png" alt="Transformational Wellness for Women" class="logo-img"></a>
+    <ul class="nav-links">
+        <li><a href="about-transformation-with-abi.html">My Story</a></li>
+        <li><a href="transformations.html">Transformations</a></li>
+        <li><a href="wellness-packages-for-women-body-transformation.html">Wellness Packages</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="contact-abi.html">Contact</a></li>
+        <li class="animated-gradient"><a href="contact-abi.html">Start the Wellness Journey</a></li>
+    </ul>
+    <div class="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="close-button-container">
+        <button class="close-button"><i class="fas fa-times"></i></button>
+    </div>
+</nav>
         </div>
     </header>
 
@@ -180,6 +207,9 @@
             // Mobile Menu Toggle
             $('.hamburger').click(function() {
                 $('.nav-links').toggleClass('active');
+            });
+            $('.close-button-container').click(function() {
+                $('.nav-links').removeClass('active');
             });
             
             // Smooth Scrolling

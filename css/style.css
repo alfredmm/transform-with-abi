@@ -1038,15 +1038,14 @@ footer {
         margin-right: 0; /* Remove margin-right for centering */
         margin-bottom: 10px; /* Add a bit of space below the image */
         display: block; /* Make it a block element to center with margin auto */
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 20px;
         width: 100px;
         height: 100px;
     }
 
     .nav-links {
         position: fixed;
-        top: 80px; /* Adjusted to be below the header, assuming header height around 80px */
+        top: 100px; /* Adjusted to be below the header, assuming header height around 80px */
         left: -100%;
         width: 100%;
         height: calc(100vh - 80px);
@@ -1070,7 +1069,7 @@ footer {
         display: block;
         position: absolute; /* Position hamburger absolutely within the header */
         right: 30px; /* Align to the right */
-        top: 70px; /* Adjust top position as needed */
+        top: 60px; /* Adjust top position as needed */
         z-index: 1001; /* Ensure hamburger is above everything */
         color: var(--baby-blue);
         font-size: larger;
