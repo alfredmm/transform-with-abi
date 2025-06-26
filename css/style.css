@@ -1087,11 +1087,7 @@ footer {
     }
 
     .close-button{
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 1001; /* Ensure close button is above everything */
+        display: none; /* Ensure close button is above everything */
     }
     
      .close-button-container{
