@@ -355,19 +355,26 @@ nav {
 }
 
 .image-wrapper {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    max-width: 600px;
     position: relative;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .image-wrapper img {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: 100%; /* Let image scale proportionally */
     object-fit: cover;
     object-position: center;
 }
 
+
+@media (max-width: 768px) {
+  .image-wrapper {
+    width: 100%;
+  }
+}
 .before-label, .after-label {
     position: absolute;
     padding: 5px 10px;
