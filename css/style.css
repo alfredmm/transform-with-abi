@@ -1079,17 +1079,26 @@ footer {
         justify-content: center;
         transition: left 0.3s;
         z-index: 999; /* Ensure nav links are below the fixed header but above other content */
+        padding: 20px 0; /* Add some padding for better spacing */
+        display: none; /* Hide by default */
     }
 
     .nav-links.active {
                 display: block;
                 left: 0; /* Slide in from the left */
+
          }
 
     .nav-links li {
-        margin: 15px 0;
+        margin: 25px 0;
     }
-
+    .nav-links li a {
+        font-size: 1.5rem; /* Increase font size for better visibility */
+        padding: 10px 20px; /* Add padding for better touch targets */
+    }
+    .nav-links li a:active {
+        color: var(--dark-pink); /* Ensure visited links are visible */
+    }
     .hamburger {
         display: block;
         position: absolute; /* Position hamburger absolutely within the header */
