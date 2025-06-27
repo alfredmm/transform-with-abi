@@ -742,7 +742,8 @@ nav {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 60p
+    x;
     flex-wrap: wrap;
 }
 
@@ -761,8 +762,8 @@ nav {
 }
 
 .contact-icon {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1120,6 +1121,9 @@ footer {
         right: 20px;
         z-index: 1001; /* Ensure close button is above everything */
      }
+     #transformation-title {
+        font-size: 3.5rem;
+     }
     .steps, .transformation-cards {
         flex-direction: column;
     }
@@ -1184,6 +1188,32 @@ footer {
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
+
+.contact-email-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.copy-email-button, .whatsapp-button, .phone-button {
+  padding: 6px 14px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  background: linear-gradient(120deg, var(--dark-pink), #3bbd08, #28a745); /* pink, baby blue, green */
+  background-size: 200% 200%;
+  transition: background-position 0.6s ease, transform 0.2s ease;
+  margin-top: 15px;
+}
+
+.copy-email-button, .whatsapp-button, .phone-button:hover {
+  background-color: #218838;
+}
+
 
 
 

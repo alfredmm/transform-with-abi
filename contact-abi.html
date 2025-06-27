@@ -59,19 +59,21 @@
                     <div class="contact-icon phone">
                         <i class="fas fa-phone"></i>
                     </div>
-                    <span>Call Me</span>
+                    <button class="phone-button">Call Me</button>
                 </a>
                 <a href="https://wa.me/14045630955" target="_blank" class="contact-icon-link zoom-in" style="transition-delay: 0.2s;">
                     <div class="contact-icon whatsapp">
                         <i class="fab fa-whatsapp"></i>
                     </div>
-                    <span>WhatsApp</span>
-                </a>
-                <a href="mailto:abigael.ivia.wellness@gmail.com" class="contact-icon-link zoom-in" style="transition-delay: 0.4s;">
-                    <div class="contact-icon email">
+                    <button class="whatsapp-button">WhatsApp</button>
+                    
+                    <a href="" class="contact-icon-link zoom-in" style="transition-delay: 0.4s;">
+                        <div class="contact-icon email">
                         <i class="fas fa-envelope"></i>
-                    </div>
-                    <span>Email Me</span>
+                        </div>
+                        <button onclick="copyEmail(this)" class="copy-email-button">Copy Email</button>
+                    </a>
+
                 </a>
             </div>
         </div>
@@ -101,11 +103,12 @@
                     <p>Phone: +1 (404) 563-0955</p>
                     
                     <div class="social-links">
-                        <a href="https://web.facebook.com/profile.php?id=100084493600774" class="facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/transformwithabi" class="instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@abigaelivia" class="youtube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.tiktok.com/@abigaelivia?_t=ZM-8xKyyAyGOyU&_r=1" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://web.facebook.com/profile.php?id=61577075236991#" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/transformwithabi" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@abigaelivia" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@abigaelivia?_t=ZM-8xKyyAyGOyU&_r=1" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
                     </div>
+
                 </div>
             </div>
             
@@ -116,5 +119,23 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/script.js"></script> </body>
+    <script src="js/script.js"></script> 
+
+<script>
+  function copyEmail(button) {
+    navigator.clipboard.writeText("abigael.ivia.wellness@gmail.com")
+      .then(() => {
+        button.textContent = "Email Copied!";
+        setTimeout(() => {
+          button.textContent = "Copy Email";
+        }, 4000);
+      })
+      .catch(err => {
+        button.textContent = "Failed to Copy";
+        console.error(err);
+      });
+  }
+</script>
+
+</body>
 </html>
