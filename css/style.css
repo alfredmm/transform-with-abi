@@ -184,6 +184,22 @@ nav {
 .transform-hero::before { background: url('https://images.unsplash.com/photo-1646938863839-4d49ded55765?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover; }
 .contact-hero::before { background: url('../assets/images/contact.png') no-repeat center center/cover; }
 .how-hero::before { background: url('../assets/images/header.png') no-repeat center center/cover; }
+
+@media (max-width: 768px) {
+    .transform-hero::before {
+        background-image: url('../assets/images/transformations-stories-small.png');
+    }
+    .contact-hero::before {
+        background-image: url('../assets/images/contact.PNG');
+    }
+    .how-hero::before {
+        background-image: url('../assets/images/how-small.png');
+    }
+    .about-package-hero::before {
+        background-image: url('../assets/images/wellness-packages-small.png');
+    }
+}
+
 .hero-content {
     position: relative;
     z-index: 3;
