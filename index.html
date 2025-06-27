@@ -112,15 +112,15 @@
             
             <div class="stats-container">
                 <div class="stat-item fade-in">
-                    <div class="stat-number" data-count="1000">0</div>+
+                    <div class="stat-number" data-count="100">0</div>+
                     <p>People Reached</p>
                 </div>
                 <div class="stat-item fade-in" style="transition-delay: 0.2s">
-                    <div class="stat-number" data-count="200">0</div>+
+                    <div class="stat-number" data-count="20">0</div>+
                     <p>Body Transformations</p>
                 </div>
                 <div class="stat-item fade-in" style="transition-delay: 0.4s">
-                    <div class="stat-number" data-count="4200">0</div>+
+                    <div class="stat-number" data-count="1000">0</div>+
                     <p>Community Members</p>
                 </div>
             </div>
@@ -241,7 +241,7 @@
                     easing: 'swing',
                     step: function(now) {
                         // Format numbers with commas
-                        if ($(this).data('count') >= 1000) {
+                        if ($(this).data('count') >= 100) {
                             $(this).text(Math.ceil(now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                         } else {
                             $(this).text(Math.ceil(now));
